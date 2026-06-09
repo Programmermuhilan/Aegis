@@ -1,0 +1,8 @@
+[
+  { "event": "order_placed", "order_id": "ORD203948", "timestamp": 1717900000.12, "source": "web" },
+  { "event": "order_placed", "order_id": "ORD982348", "timestamp": 1717900000.65, "source": "mobile" },
+  { "event": "order_placed", "order_id": "ORD102938", "timestamp": 1717900001.21, "source": "web" },
+  { "event": "order_placed", "order_id": "ORD746193", "timestamp": 1717900001.88, "source": "api" },
+  { "event": "order_placed", "order_id": "ORD552948", "timestamp": 1717900002.34, "source": "mobile" },
+  { "event": "order_placed", "order_id": "ORD302948", "timestamp": 1717900002.91, "source": "web" }
+]
