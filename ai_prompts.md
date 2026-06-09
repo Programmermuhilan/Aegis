@@ -1,6 +1,6 @@
 # Key Prompts Used During Development
 
-This document logs the core prompts and instructions provided to AI Coding Assistants during the co-creation of the **Anomaly Aegis** system.
+This document logs the core prompts and instructions provided to AI Coding Assistants during the co-creation of the **Aegis** system.
 
 ---
 

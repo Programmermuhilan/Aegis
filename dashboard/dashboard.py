@@ -8,7 +8,7 @@ from datetime import datetime
 
 # Configure page settings
 st.set_page_config(
-    page_title="Anomaly Aegis — Streaming Analytics",
+    page_title="Aegis — Streaming Analytics",
     page_icon="🛡️",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -76,7 +76,7 @@ def load_live_metrics():
         return {"opm": 0, "z_score": 0.0, "status": "Steady State", "active_threats": 0}
 
 # Application Title
-st.title("🛡️ Anomaly Aegis: Streaming Agent Anomaly System")
+st.title("🛡️ Aegis: Streaming Agent Anomaly System")
 st.caption("Real-time Sliding Window Statistical Anomaly Detection & Autonomous ReAct Agent Containment Dashboard")
 
 # Navigation/Controls Sidebar

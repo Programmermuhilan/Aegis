@@ -176,7 +176,7 @@ export async function runServerAgentLoop(anomalyId: number, currentSpikeCount: n
       }
     ];
 
-    const systemPrompt = `You are the autonomous Anomaly Aegis ReAct AI Agent. Your objective is investigate and solve Anomaly ID #${anomalyId} using our local tool server.
+    const systemPrompt = `You are the autonomous Aegis ReAct AI Agent. Your objective is investigate and solve Anomaly ID #${anomalyId} using our local tool server.
 Available tools metadata:
 ${JSON.stringify(mcpToolsDesc, null, 2)}
 

@@ -8,4 +8,6 @@ coverage/
 !.env.example
 storage/*.json
 __pycache__/
-*.pyc
+storage/*.db*
+storage/*.log
+.idea/

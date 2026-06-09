@@ -297,7 +297,7 @@ export default function App() {
               <ShieldCheck className="w-8 h-8" />
             </div>
             <h1 className="text-xl font-bold tracking-widest uppercase text-white font-sans flex items-center gap-2">
-              Anomaly Aegis
+              Aegis
             </h1>
             <p className="text-[11px] text-gray-400 max-w-sm tracking-wide">
               Secure Multi-Agent Anomaly Detection & Threat Prevention Gateway
@@ -405,7 +405,7 @@ export default function App() {
   }
 
   return (
-    <div id="anomaly-aegis-root" className="flex h-screen w-full flex-col bg-[#050505] font-sans text-gray-200 overflow-hidden selection:bg-red-500/30 selection:text-red-200">
+    <div id="aegis-root" className="flex h-screen w-full flex-col bg-[#050505] font-sans text-gray-200 overflow-hidden selection:bg-red-500/30 selection:text-red-200">
       
       {/* Top Technical Navigation Bar */}
       <header id="aegis-header" className="flex items-center justify-between border-b border-white/10 bg-[#0a0a0a] px-6 py-3 shrink-0">
@@ -415,7 +415,7 @@ export default function App() {
           </div>
           <div>
             <h1 className="text-sm font-bold tracking-widest uppercase text-white flex items-center gap-2">
-              Anomaly Aegis
+              Aegis
               <span className={`ml-2 text-[10px] font-mono tracking-normal uppercase px-1.5 py-0.5 rounded ${
                 isBreachedStatus 
                   ? "bg-red-950 text-red-500 border border-red-500/30 animate-pulse underline decoration-red-500/30" 

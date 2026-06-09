@@ -327,7 +327,7 @@ async function startServer() {
 
   app.listen(PORT, "0.0.0.0", () => {
     console.log(`\n======================================================`);
-    console.log(`  Anomaly Aegis Full-Stack Platform Active!`);
+    console.log(`  Aegis Full-Stack Platform Active!`);
     console.log(`  Live UI view running on: http://localhost:${PORT}`);
     console.log(`======================================================\n`);
   });

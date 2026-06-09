@@ -43,7 +43,7 @@ def trigger_anomaly_discord_alert(webhook_url, anomaly_id, z_score, order_count,
     time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")
     
     embed = {
-        "title": "🚨 SYSTEM ANOMALY DETECTED (Anomaly Aegis)",
+        "title": "🚨 SYSTEM ANOMALY DETECTED (Aegis)",
         "color": 15158332, # Vibrant Red
         "fields": [
             {"name": "Anomaly ID", "value": f"#{anomaly_id}", "inline": True},
@@ -53,11 +53,11 @@ def trigger_anomaly_discord_alert(webhook_url, anomaly_id, z_score, order_count,
             {"name": "Baseline Std Dev", "value": f"{std:.2f}", "inline": True},
             {"name": "Timestamp", "value": time_str, "inline": False}
         ],
-        "description": "The system order rate has breached the Z-Score threshold. The Anomaly Aegis ReAct AI Agent has been spawned to run real-time diagnostic mitigation.",
+        "description": "The system order rate has breached the Z-Score threshold. The Aegis ReAct AI Agent has been spawned to run real-time diagnostic mitigation.",
         "footer": {
-            "text": "Anomaly Aegis Streaming Control Loop"
+            "text": "Aegis Streaming Control Loop"
         }
     }
     
-    msg_content = f"📣 **Anomaly Alert!** Anomaly Aegis detected a sliding window breach (Z-Score: **{z_score:.2f}**)."
+    msg_content = f"📣 **Anomaly Alert!** Aegis detected a sliding window breach (Z-Score: **{z_score:.2f}**)."
     return send_discord_webhook(webhook_url, msg_content, embed)

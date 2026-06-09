@@ -1,6 +1,6 @@
 # AI Usage & Solution Architecture Report
 
-This report outlines the co-creation workflow of **Anomaly Aegis** with the Google AI Studio assistant, detailing executed tasks, identified bugs/limitations, and the corresponding mitigation resolutions.
+This report outlines the co-creation workflow of **Aegis** with the Google AI Studio assistant, detailing executed tasks, identified bugs/limitations, and the corresponding mitigation resolutions.
 
 ---
 
@@ -19,7 +19,7 @@ This report outlines the co-creation workflow of **Anomaly Aegis** with the Goog
 
 ## 🤖 AI Assistant Contributions
 
-The AI Coding Assistant served as a Senior Architect and Software Systems Engineer. The specific prompts used during development are documented in [ai_prompts.md](file:///c:/Users/Mugilan/Downloads/anomaly-aegis/ai_prompts.md). 
+The AI Coding Assistant served as a Senior Architect and Software Systems Engineer. The specific prompts used during development are documented in [ai_prompts.md](file:///c:/Users/Mugilan/Downloads/aegis/ai_prompts.md). 
 
 Tasks executed by the assistant:
 1.  **SQLite Event Scheme Configuration & Storage (`storage/db.py` & `src/server_db.ts`):** Scaffolded relational schemas for transaction data tracking logs, alert logs, and ReAct agent steps.

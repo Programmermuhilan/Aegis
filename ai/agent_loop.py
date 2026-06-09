@@ -95,7 +95,7 @@ def run_react_agent_loop(anomaly_id, db_path="storage/events.db"):
     import requests
     
     # System prompt directing ReAct flow with tools
-    system_prompt = f"""You are an autonomous Anomaly Aegis ReAct AI Agent. Your objective is investigate and solve Anomaly ID #{anomaly_id} in the streaming order database using our local MCP Server tools.
+    system_prompt = f"""You are an autonomous Aegis ReAct AI Agent. Your objective is investigate and solve Anomaly ID #{anomaly_id} in the streaming order database using our local MCP Server tools.
 Available tools:
 {json.dumps(mcp.list_tools(), indent=2)}
 
