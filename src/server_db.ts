@@ -70,7 +70,8 @@ export async function initServerDb(): Promise<void> {
           event_type TEXT,
           order_id TEXT,
           timestamp REAL,
-          source TEXT
+          source TEXT,
+          formatted_time TEXT GENERATED ALWAYS AS (datetime(timestamp, 'unixepoch'))
         )
       `, (err) => {
         if (err) return reject(err);
@@ -86,7 +87,8 @@ export async function initServerDb(): Promise<void> {
           window_std REAL,
           event_count INTEGER,
           status TEXT DEFAULT 'Pending Mitigation',
-          diagnosis TEXT DEFAULT 'No analysis yet.'
+          diagnosis TEXT DEFAULT 'No analysis yet.',
+          formatted_time TEXT GENERATED ALWAYS AS (datetime(timestamp, 'unixepoch'))
         )
       `, (err) => {
         if (err) return reject(err);
@@ -101,6 +103,7 @@ export async function initServerDb(): Promise<void> {
           step INTEGER,
           type TEXT,
           content TEXT,
+          formatted_time TEXT GENERATED ALWAYS AS (datetime(timestamp, 'unixepoch')),
           FOREIGN KEY(anomaly_id) REFERENCES anomalies(id)
         )
       `, (err) => {

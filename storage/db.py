@@ -35,7 +35,8 @@ def init_db(db_path="storage/events.db"):
         event_type TEXT,
         order_id TEXT,
         timestamp REAL,
-        source TEXT
+        source TEXT,
+        formatted_time TEXT GENERATED ALWAYS AS (datetime(timestamp, 'unixepoch'))
     )
     """)
     
@@ -49,7 +50,8 @@ def init_db(db_path="storage/events.db"):
         window_std REAL,
         event_count INTEGER,
         status TEXT DEFAULT 'Pending Mitigation',
-        diagnosis TEXT DEFAULT 'No analysis yet.'
+        diagnosis TEXT DEFAULT 'No analysis yet.',
+        formatted_time TEXT GENERATED ALWAYS AS (datetime(timestamp, 'unixepoch'))
     )
     """)
     
@@ -62,6 +64,7 @@ def init_db(db_path="storage/events.db"):
         step INTEGER,
         type TEXT, -- 'Thought', 'Action', 'Observation', 'Final Response'
         content TEXT,
+        formatted_time TEXT GENERATED ALWAYS AS (datetime(timestamp, 'unixepoch')),
         FOREIGN KEY(anomaly_id) REFERENCES anomalies(id)
     )
     """)
