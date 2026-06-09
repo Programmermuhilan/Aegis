@@ -8,7 +8,7 @@ import time
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from detection.consumer import calculate_stats
-from storage.db import init_db, insert_event, insert_anomaly, insert_agent_log
+from storage.db import init_db, insert_event, insert_anomaly, insert_agent_log, close_db_connection
 from mcp_server import MCPServer
 from ai.agent_loop import run_react_agent_loop
 
@@ -17,11 +17,16 @@ class TestAnomalyAegis(unittest.TestCase):
     def setUp(self):
         self.test_db = "storage/test_events.db"
         # Ensure database is freshly created/reset
+        close_db_connection()
         if os.path.exists(self.test_db):
-            os.remove(self.test_db)
+            try:
+                os.remove(self.test_db)
+            except Exception:
+                pass
         init_db(self.test_db)
         
     def tearDown(self):
+        close_db_connection()
         if os.path.exists(self.test_db):
             try:
                 os.remove(self.test_db)

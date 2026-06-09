@@ -19,7 +19,9 @@ This report outlines the co-creation workflow of **Anomaly Aegis** with the Goog
 
 ## 🤖 AI Assistant Contributions
 
-The AI Coding Assistant served as a Senior Architect and Software Systems Engineer executing the following tasks:
+The AI Coding Assistant served as a Senior Architect and Software Systems Engineer. The specific prompts used during development are documented in [ai_prompts.md](file:///c:/Users/Mugilan/Downloads/anomaly-aegis/ai_prompts.md). 
+
+Tasks executed by the assistant:
 1.  **SQLite Event Scheme Configuration & Storage (`storage/db.py` & `src/server_db.ts`):** Scaffolded relational schemas for transaction data tracking logs, alert logs, and ReAct agent steps.
 2.  **Sliding Window Stats Engine (`detection/consumer.py` & `server.ts`):** Encapsulated mean, standard deviation, and dynamic Z-Score calculation boundaries inside high-fidelity continuous listeners.
 3.  **Model Context Protocol Schema (`mcp_server.py` & `src/server_agent.ts`):** Outlined tools mapping schema to permit programmatic queries, firewall mitigations, and Discord warning transmissions.

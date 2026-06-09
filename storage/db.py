@@ -14,6 +14,15 @@ def get_db_connection(db_path="storage/events.db"):
         _local.conn.execute("PRAGMA journal_mode=WAL;")  # Enable Write-Ahead Logging for better concurrency
     return _local.conn
 
+def close_db_connection():
+    if hasattr(_local, "conn") and _local.conn is not None:
+        try:
+            _local.conn.close()
+        except Exception:
+            pass
+        _local.conn = None
+
+
 def init_db(db_path="storage/events.db"):
     os.makedirs(os.path.dirname(db_path), exist_ok=True)
     conn = sqlite3.connect(db_path)
